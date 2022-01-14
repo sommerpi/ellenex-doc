@@ -1,7 +1,9 @@
+# Downlink Encoder Instruction on TheThingsNetwork
+The document demonstrates how to use JSON files to send downlink message to your Ellenex device on TheThingsNetwork.
 ## Change sampling rate
-You can use downlink messages to change the sampling rate in minutes or seconds. Currently, minimum sampling rate is 60 seconds (i.e. one minute). Please contact our support via [support@ellenex.com](mailto:support@ellenex.com) if samling rate below 60 seconds is required.
+You can use downlink messages to change the sampling rate in minutes or seconds. Currently, the minimum sampling rate is 60 seconds (i.e. one minute). Please contact our support via [support@ellenex.com](mailto:support@ellenex.com) if sampling rate below 60 seconds is required.
 ### Change sampling rate in minutes
-The following script changes the sampling rate to 180 minutes (i.e. 3 hours). Change the value in the "time" field to set different sampling rate.
+The following script changes the sampling rate to 180 minutes (i.e. 3 hours). Change the value in the "time" field to set a different sampling rate.
 ```json
 {
   "command": 1,
@@ -12,7 +14,7 @@ The following script changes the sampling rate to 180 minutes (i.e. 3 hours). Ch
 }
 ```
 ### Change sampling rate in seconds
-The following script changes the sampling rate to 180 seconds (i.e. 3 minutes). Change the value in the "time" field to set different sampling rate.
+The following script changes the sampling rate to 180 seconds (i.e. 3 minutes). Change the value in the "time" field to set a different sampling rate.
 ```json
 {
   "command": 1,
@@ -22,7 +24,7 @@ The following script changes the sampling rate to 180 seconds (i.e. 3 minutes). 
   }
 }
 ```
-
+ 
 ## Enable/disable confirmation
 You can use downlink messages to switch on/off the confirmation.
 ### Enable confirmation
@@ -69,12 +71,12 @@ Use the following script to disable auto-reset.
 ```
 ### Change auto-reset interval
 The following script forces the device to reset itself after sending 3000 samples. Change the value in the "count" field to set a different auto-reset interval. Changing the value to 0 will disable auto-reset.
-
+ 
 Please note that:
-- In OTA devices, this will initiate joining process after reset.
+- In OTA devices, this will initiate the joining process after reset.
 - In ABP devices, this will reset the frame counter.
 - If the requested value is less than the current auto-reset interval, this will result in immediate reset.
-
+ 
 ```json
 {
   "command": 4,
